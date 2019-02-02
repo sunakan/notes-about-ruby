@@ -6,3 +6,6 @@ gem 'guard-rspec'
 gem 'rspec'
 gem 'rubocop'
 gem 'simplecov'
+
+# For CircleCI
+gem "rspec_junit_formatter"
