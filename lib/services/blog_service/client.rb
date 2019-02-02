@@ -12,24 +12,33 @@ module Services
       end
 
       private
-      def fake_response
-        {
-          status: 200,
-          body: {
-            id: Faker::Number.unique.number(9).to_i,
-            owner_id: Faker::Number.unique.number(9).to_i,
-            member_ids: Array.new(rand(5)).map {Faker::Number.unique.number.to_i},
-            name: Faker::Book.title,
-            articles: Array.new(rand(5)).map {
-              {
-                id: Faker::Number.unique.number(9).to_i,
-                title: Faker::LeagueOfLegends.champion,
-                creted_at: Faker::Date.between(10.years.ago, Date.today),
-              }
+
+        def fake_response
+          articles = Array.new(rand(5)).map { fake_article }
+
+          {
+            status: 200,
+            body: {
+              id: fake_user_id,
+              owner_id: fake_user_id,
+              member_ids: Array.new(rand(5)).map { fake_user_id },
+              name: Faker::Book.title,
+              articles: articles
             }
+          }.to_json
+        end
+
+        def fake_user_id
+          Faker::Number.unique.number(9).to_i
+        end
+
+        def fake_article
+          {
+            id: Faker::Number.unique.number(9).to_i,
+            title: Faker::LeagueOfLegends.champion,
+            creted_at: Faker::Date.between(10.years.ago, Time.zone.today)
           }
-        }.to_json
-      end
+        end
     end
   end
 end
