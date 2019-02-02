@@ -11,3 +11,5 @@ gem "simplecov"
 gem "rspec_junit_formatter"
 
 gem "activemodel"
+gem "faker"
+gem "activesupport"
