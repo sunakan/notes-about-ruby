@@ -20,3 +20,9 @@ $ sudo chown -R vagrant spec
 $ sudo chown -R vagrant spec
 $ vim .rspec
 ```
+
+## RSpec実行方法
+
+```
+$ sudo docker-compose run --rm app rspec spec/
+```
