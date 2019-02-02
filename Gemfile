@@ -9,3 +9,5 @@ gem "simplecov"
 
 # For CircleCI
 gem "rspec_junit_formatter"
+
+gem "activemodel"
