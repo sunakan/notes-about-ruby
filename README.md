@@ -30,3 +30,11 @@ $ vim .rspec
 ```
 $ sudo docker-compose run --rm app rspec spec/
 ```
+
+## Rubocop実行方法
+
+```
+$ sudo docker-compose run --rm app rubocop -a
+```
+
+- `-a` オプションで上書き(できるとこだけ)
