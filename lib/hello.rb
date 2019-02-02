@@ -1,7 +1,5 @@
 module Hello
-  def call
+  def self.call
     "Hello World"
   end
-
-  module_function :call
 end
