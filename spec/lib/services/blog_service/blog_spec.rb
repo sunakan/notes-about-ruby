@@ -81,6 +81,5 @@ RSpec.describe Services::BlogService::Blog, type: :model do
         end
       end
     end
-
   end
 end
