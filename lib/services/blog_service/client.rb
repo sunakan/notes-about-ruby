@@ -36,7 +36,7 @@ module Services
           {
             id: Faker::Number.unique.number(9).to_i,
             title: Faker::LeagueOfLegends.champion,
-            creted_at: Faker::Date.between(10.years.ago, Time.current)
+            created_at: Faker::Date.between(10.years.ago, Time.current)
           }
         end
     end
