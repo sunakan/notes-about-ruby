@@ -54,7 +54,6 @@ RSpec.describe Services::BlogService::Article, type: :model do
         it "通る" do
           data = success_data.merge(title: "")
           article = Services::BlogService::Article.new(data)
-          article.title = -1
           expect(article).to be_valid
         end
       end
